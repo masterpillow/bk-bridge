@@ -19,7 +19,7 @@ if volume == 'Hourly':
     fig = plt.figure(figsize=(12, 6))
     ax = fig.add_subplot()
 
-    ax.plot(bridge.index, bridge['pedestrians'].values)
+    ax.plot(bridge.index, bridge['pedestrians'])
     ax.set_title('Hourly Brooklyn Bridge Pedestrian Traffic, 10/2017-06/2018')
     ax.set_xlabel('Date')
     ax.set_ylabel('Total pedestrians per hour')
@@ -36,7 +36,7 @@ elif volume == 'Daily':
     fig = plt.figure(figsize=(12, 6))
     ax = fig.add_subplot()
 
-    ax.plot(daily.index, daily['to_manhattan'].values,
+    ax.plot(daily.index, daily['to_manhattan'],
             label='Towards Manhattan', linewidth = 3)
     ax.plot(daily.index, daily['to_brooklyn'],
             label='Towards Brooklyn', linewidth = 3)
@@ -58,7 +58,7 @@ else:
     fig = plt.figure(figsize=(12, 6))
     ax = fig.add_subplot()
 
-    ax.plot(weekly.index, weekly['to_manhattan'].values,
+    ax.plot(weekly.index, weekly['to_manhattan'],
             label='Towards Manhattan', linewidth = 3)
     ax.plot(weekly.index, weekly['to_brooklyn'],
             label='Towards Brooklyn', linewidth = 3)
